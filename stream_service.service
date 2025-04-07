@@ -1,0 +1,14 @@
+[Unit]
+Description=FFmpeg Stream Service
+After=network.target
+
+[Service]
+ExecStart=/home/pi/monitor_stream.sh
+User=pi
+Restart=always
+RestartSec=5s
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
